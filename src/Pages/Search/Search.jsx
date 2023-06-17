@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { bookData } from '../../Data/Data';
 import BookCard from "../../Components/BookCard/BookCard"
 
@@ -18,6 +19,9 @@ const Search = () => {
 
   return (
     <div>
+      <Link to="/">
+        <button>Back to Home</button>
+      </Link>
       <input type="text" value={searchTerm} onChange={handleSearch} placeholder="Search books" />
       <div>
         {searchResults.map((book) => (
