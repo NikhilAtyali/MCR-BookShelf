@@ -1,9 +1,9 @@
 import './App.css';
-import BookCard from './Components/BookCard/BookCard';
+import Container from './Components/Container/Container';
 function App() {
   return (
     <div className="App">
-      <BookCard />
+      <Container />
     </div>
   );
 }

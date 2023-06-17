@@ -1,7 +1,7 @@
-import React from 'react'
-import {bookData} from "../../Data/Data"
+import React, {useState} from 'react'
+
 const BookCard = () => {
-    console.log({bookData});
+    
   return (
     <div className='bookCardContainer'>
         <img src="bookImage" alt="" />
