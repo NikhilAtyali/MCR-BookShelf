@@ -9,13 +9,23 @@ const WillRead = () => {
     })
     setWillReadReadBooks(currentBookData)
   },[])
+  const handleUpdateBook = (updatedBook) => {
+    const updatedBooks = willReadBooks.map((book) => {
+      if (book.id === updatedBook.id) {
+        return updatedBook;
+      }
+      return book;
+    });
+
+    setWillReadReadBooks(updatedBooks.filter(book => book.state === 'want to read'));
+  };
   return (
     <div>
       <h1>Wnat to Read</h1>
       <div className="book-container">
       {willReadBooks.map((book) => (
         <div className="book-card" key={book.id}>
-        <BookCard key={book.id} book={book} />
+        <BookCard  book={book} onUpdateBook={handleUpdateBook} />
         </div>
       ))}
       </div>

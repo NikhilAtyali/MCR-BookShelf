@@ -8,15 +8,25 @@ const HaveRead = () => {
       return book.state === "read"
     })
     setReadBooks(currentBookData)
-    console.log(currentBookData, "CurrentBooks");
+    
   },[])
+  const handleUpdateBook = (updatedBook) => {
+    const updatedBooks = readBooks.map((book) => {
+      if (book.id === updatedBook.id) {
+        return updatedBook;
+      }
+      return book;
+    });
+
+    setReadBooks(updatedBooks.filter(book => book.state === 'read'));
+  };
   return (
     <div>
       <h1>Read</h1>
       <div className="book-container"> 
       {readBooks.map((book) => (
         <div className="book-card" key={book.id}>
-        <BookCard key={book.id} book={book} />
+        <BookCard  book={book} onUpdateBook={handleUpdateBook}/>
         </div>
       ))}
       </div>
@@ -25,3 +35,5 @@ const HaveRead = () => {
 }
 
 export default HaveRead
+
+

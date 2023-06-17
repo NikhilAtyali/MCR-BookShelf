@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import BookCard from '../BookCard/BookCard';
 import { bookData } from '../../Data/Data';
-import './CurrentlyReading.css'; // Import the CSS file
+import './CurrentlyReading.css'; 
 
 const CurrentlyReading = () => {
   const [currentBooks, setCurrentBooks] = useState([]);
@@ -15,7 +15,7 @@ const CurrentlyReading = () => {
   }, []);
 
   const handleUpdateBook = (updatedBook) => {
-    const updatedBooks = bookData.map((book) => {
+    const updatedBooks = currentBooks.map((book) => {
       if (book.id === updatedBook.id) {
         return updatedBook;
       }
