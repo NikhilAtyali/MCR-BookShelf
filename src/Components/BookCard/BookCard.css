@@ -1,0 +1,71 @@
+.bookCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bookCard img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.bookCard h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.bookCard p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btnContainer p {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.btnContainer button {
+  margin-right: 5px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #f2f2f2;
+  color: #333;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btnContainer button:hover {
+  background-color: #ddd;
+}
+
+.btnContainer button.currentlyReading {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.btnContainer button.read {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.btnContainer button.wantToRead {
+  background-color: #f44336;
+  color: #fff;
+}
